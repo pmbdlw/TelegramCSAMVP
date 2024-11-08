@@ -262,14 +262,14 @@ public class TelegramManager
     }
     private void PublishMessage(TelegramMessageEvent messageEvent)
     {
-        var json =  await  JsonSerializer.SerializeAsync((messageEvent); //JsonConvert.SerializeObject(messageEvent);
-        var body = Encoding.UTF8.GetBytes(json);
-
-        await _channel.BasicPublishAsync(
-            exchange: _config.ExchangeName,
-            routingKey: _config.RoutingKey,
-            basicProperties: null,
-            body: body);
+        // var json =  await  JsonSerializer.SerializeAsync((messageEvent); //JsonConvert.SerializeObject(messageEvent);
+        // var body = Encoding.UTF8.GetBytes(json);
+        //
+        // await _channel.BasicPublishAsync(
+        //     exchange: _config.ExchangeName,
+        //     routingKey: _config.RoutingKey,
+        //     basicProperties: null,
+        //     body: body);
     }
     public async Task LogoutClient(string phoneNumber)
     {
