@@ -1,0 +1,45 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TelegramCSAMVP.Web", "src\TelegramCSAMVP.Web\TelegramCSAMVP.Web.csproj", "{18A795E0-4F32-4979-BD5C-BC439DC68720}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CSASystemAPI", "src\CSASystemAPI\CSASystemAPI.csproj", "{8B266C4F-682C-4029-BA7F-30528801C182}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{909E0D44-9DFD-4E65-979D-B83D15590FAE}"
+	ProjectSection(SolutionItems) = preProject
+		docker-compose.yml = docker-compose.yml
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CSATelegramAPI", "src\CSATelegramAPI\CSATelegramAPI.csproj", "{84CA77EE-CC23-4CAF-B16F-ECA5A1D7F84D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CSAFacade", "src\CSAFacade\CSAFacade.csproj", "{1085BBFF-809D-470A-8747-0CFA9890BC2A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TelegramCSAMVP.Entity", "TelegramCSAMVP.Entity\TelegramCSAMVP.Entity.csproj", "{5ADA7F4B-2C7F-44D6-85DE-1971C86181E6}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{18A795E0-4F32-4979-BD5C-BC439DC68720}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{18A795E0-4F32-4979-BD5C-BC439DC68720}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{18A795E0-4F32-4979-BD5C-BC439DC68720}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{18A795E0-4F32-4979-BD5C-BC439DC68720}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8B266C4F-682C-4029-BA7F-30528801C182}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8B266C4F-682C-4029-BA7F-30528801C182}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8B266C4F-682C-4029-BA7F-30528801C182}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8B266C4F-682C-4029-BA7F-30528801C182}.Release|Any CPU.Build.0 = Release|Any CPU
+		{84CA77EE-CC23-4CAF-B16F-ECA5A1D7F84D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{84CA77EE-CC23-4CAF-B16F-ECA5A1D7F84D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{84CA77EE-CC23-4CAF-B16F-ECA5A1D7F84D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{84CA77EE-CC23-4CAF-B16F-ECA5A1D7F84D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1085BBFF-809D-470A-8747-0CFA9890BC2A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1085BBFF-809D-470A-8747-0CFA9890BC2A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1085BBFF-809D-470A-8747-0CFA9890BC2A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1085BBFF-809D-470A-8747-0CFA9890BC2A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5ADA7F4B-2C7F-44D6-85DE-1971C86181E6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5ADA7F4B-2C7F-44D6-85DE-1971C86181E6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5ADA7F4B-2C7F-44D6-85DE-1971C86181E6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5ADA7F4B-2C7F-44D6-85DE-1971C86181E6}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,61 @@
+@using Microsoft.AspNetCore.Mvc.TagHelpers
+@model IEnumerable<TelegramCSAMVP.Web.Services.TGMessage>
+@{
+    ViewBag.Title = "Telegram 对话-";
+}
+
+<h3>@ViewBag.Title </h3>
+<partial name="_TGNav"/>
+@* Telegram 账户列表 *@
+<div class="text-center">
+    <h1 class="display-4">@ViewBag.Title</h1>
+    <div class="card">
+        <div class="card-body">
+            <ul class="list-group">
+                @foreach (var item in Model)
+                {
+                    <li class="list-group-item @((item.FromId == 1081263530)?"bg-info":"")">
+                        <div style="text-align: left; "> @((item.FromId == 1081263530)?"我:":"Sender-"+@item.FromId + ":") @item.Text <span style="float: right; color: #146c43">@item.Date.ToString("yyyy-MM-dd HH:mm:ss")</span></div>
+                    </li>    
+                }
+            </ul>
+        </div>
+    </div>
+    <div class="input-group mb-3">
+        <input type="text" class="form-control" id="txtMessage" placeholder="Recipient's username" aria-label="Recipient's username" aria-describedby="basic-addon2">
+        <div class="input-group-append">
+            <button class="btn btn-outline-secondary" id="btnSend" type="button">Send</button>
+        </div>
+    </div>
+    <div class="input-group mb-3">
+        <div class="custom-file">
+            <span>Upload File: </span>
+            <input type="file" class="custom-file-input" id="inputGroupFile02">
+            <label class="custom-file-label" for="inputGroupFile02">Choose file</label>
+        </div>
+        <div class="input-group-append">
+            <span class="input-group-text" id="">Upload</span>
+        </div>
+    </div>
+</div>
+@section Scripts
+{
+    <script>
+        $(document).ready(function() {
+            // Your JavaScript code here
+            $("#btnSend").click(()=>{
+                let message = $("#txtMessage").val();
+                $.post('http://localhost:5213/Telegram/Messages/Send?phoneNumber=@ViewBag.PhoneNumber&conversationId=@ViewBag.ConversationId&message='+message,
+                {})
+                    .done(function(data) {
+                        console.log('Data received from server:', data);
+                        $(".list-group").prepend('<li class="list-group-item bg-info"><div style="text-align: left; ">'+ message +'<span style="float: right; color: #146c43">'+ new Date().toLocaleString() +'</span</div></li>');
+                    })
+                    .fail(function(jqXHR, textStatus, errorThrown) {
+                        console.error('Request failed:', textStatus, errorThrown);
+                    });
+            });
+        });
+
+    </script>
+}

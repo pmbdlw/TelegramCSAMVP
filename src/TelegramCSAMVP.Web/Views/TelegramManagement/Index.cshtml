@@ -1,0 +1,15 @@
+@model string
+@{
+    ViewBag.Title = "Telegram Account Home Page";
+    // Layout = "_Layout";
+}
+
+<h2>Telegram 账户列表 </h2>
+<partial name="_TGNav"/>
+@* Telegram 账户列表 *@
+<div class="text-center">
+    <h1 class="display-4">我的Telegram 账号信息</h1>
+    <p>
+        @Model
+    </p>
+</div>

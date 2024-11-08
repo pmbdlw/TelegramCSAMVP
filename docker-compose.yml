@@ -1,0 +1,12 @@
+﻿services:
+  csasystemapi:
+    image: csasystemapi
+    build:
+      context: .
+      dockerfile: CSASystemAPI/Dockerfile
+
+  csatelegramapi:
+    image: csatelegramapi
+    build:
+      context: .
+      dockerfile: CSATelegramAPI/Dockerfile

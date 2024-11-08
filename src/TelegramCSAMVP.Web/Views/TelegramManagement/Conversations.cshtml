@@ -1,0 +1,39 @@
+@using TelegramCSAMVP.Web.Services;
+@model IEnumerable<Conversation>
+@{
+    ViewBag.Title = "Telegram 对话列表";
+    string phoneNumber = ViewBag.PhoneNumber;
+}
+
+<h2>@ViewBag.Title </h2>
+<partial name="_TGNav"/>
+@* Telegram 对话列表 *@
+<div class="text-center">
+    <h1 class="display-4">Telegram 对话列表</h1>
+    <table class="table  table-bordered table-striped">
+        <thead class="thead-dark">
+        <td>id</td>
+        <td>title</td>
+        <td>type</td>
+        <td>unreadCount</td>
+        <td>lastMessageDate</td>
+        <td>lastMessageText</td>
+        </thead>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    <a asp-area="" asp-controller="TelegramManagement" asp-action="Messages"
+                       asp-route-phoneNumber="@phoneNumber"
+                       asp-route-conversationId="@item.Id"
+                       >@item.Id</a>
+                </td>
+                <td>@item.Title</td>
+                <td>@item.Type</td>
+                <td>@item.UnreadCount</td>
+                <td>@item.LastMessageDate</td>
+                <td>@item.LastMessageText</td>
+            </tr>
+        }
+    </table>
+</div>

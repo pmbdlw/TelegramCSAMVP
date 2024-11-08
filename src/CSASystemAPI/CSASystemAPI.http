@@ -1,0 +1,6 @@
+@CSASystemAPI_HostAddress = http://localhost:5008
+
+GET {{CSASystemAPI_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
