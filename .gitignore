@@ -85,3 +85,6 @@ _ReSharper*/
 
 # macOS
 .DS_Store
+
+# session dir
+src/CSATelegramAPI/sessions/
